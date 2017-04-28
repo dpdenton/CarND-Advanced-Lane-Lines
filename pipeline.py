@@ -532,10 +532,12 @@ if __name__ == "__main__":
 
     for fname in [join(TEST_IMAGES_DIR, f) for f in listdir(TEST_IMAGES_DIR)]:
 
-        if 'test1' in fname:
-            img = cv2.imread(fname)
-            img = camera_cal.undistort(img)
-            process_img(img, fname, save=True)
+        left_line_history = LineHistory()
+        right_line_history = LineHistory()
+
+        img = cv2.imread(fname)
+        img = camera_cal.undistort(img)
+        process_img(img, fname, save=True)
 
     # from moviepy.editor import VideoFileClip
     #
