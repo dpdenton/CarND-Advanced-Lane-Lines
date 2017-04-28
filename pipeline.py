@@ -150,7 +150,7 @@ def process_img(img, fname='video.jpg', save=False):
 
     if save:
         plt.imshow(combined, cmap="gray")
-        plt.title("Combined L OR S of {}".format(fname))
+        plt.title("Combined Grad, Mag, Dir {}".format(fname))
         plt.savefig(join(save_dir, "combined.jpg"))
 
     # combine grad, mag and dir with h and l channels
@@ -267,11 +267,11 @@ def process_img(img, fname='video.jpg', save=False):
 
         y_start = np.int(combined.shape[0] / 2)
         histogram = np.sum(combined[y_start:, :], axis=0)
-        plt.clf()
         if save:
+            plt.cla()
             plt.plot(histogram)
             plt.savefig(join(save_dir, "histogram.jpg"))
-        plt.clf()
+            plt.clf()
 
         # Find the peak of the left and right halves of the histogram
         # These will be the starting point for the left and right lines
@@ -357,6 +357,7 @@ def process_img(img, fname='video.jpg', save=False):
             plt.xlim(0, 1280)
             plt.ylim(720, 0)
             plt.savefig(join(save_dir, "plot.jpg"))
+            plt.cla()
 
     #######################
     ### Radius of curve ###
@@ -508,8 +509,8 @@ if __name__ == "__main__":
     ########################
 
     # test undistortion
-    test_fname = join(CAMERA_CALIBRATION_DIR, 'calibration2.jpg')
-    camera_cal.test(test_fname, save=False)
+    # test_fname = join(CAMERA_CALIBRATION_DIR, 'calibration2.jpg')
+    # camera_cal.test(test_fname, save=False)
 
     # test transform perspective - straight lines
     fname = "test_images/straight_lines1.jpg"
@@ -523,25 +524,27 @@ if __name__ == "__main__":
     undistorted_img = camera_cal.undistort(img)
     warped_img = camera_cal.setM().warp(undistorted_img)
 
+    plt.cla()
+
     #######################
     ### Pipeline Starts ###
     #######################
 
-    # for fname in [join(TEST_IMAGES_DIR, f) for f in listdir(TEST_IMAGES_DIR)]:
+    for fname in [join(TEST_IMAGES_DIR, f) for f in listdir(TEST_IMAGES_DIR)]:
+
+        if 'test1' in fname:
+            img = cv2.imread(fname)
+            img = camera_cal.undistort(img)
+            process_img(img, fname, save=True)
+
+    # from moviepy.editor import VideoFileClip
     #
-    #     if 'test1' in fname:
-    #         img = cv2.imread(fname)
-    #         img = camera_cal.undistort(img)
-    #         process_img(img, fname, save=False)
-
-    from moviepy.editor import VideoFileClip
-
-    white_output = 'project_video_out.mp4'
-    clip1 = VideoFileClip("project_video.mp4")
-    white_clip = clip1.fl_image(process_img)
-    white_clip.write_videofile(white_output, audio=False)
-
-    print("L: ", left_line_history)
-    print("R: ", right_line_history)
+    # white_output = 'project_video_out.mp4'
+    # clip1 = VideoFileClip("project_video.mp4")
+    # white_clip = clip1.fl_image(process_img)
+    # white_clip.write_videofile(white_output, audio=False)
+    #
+    # print("L: ", left_line_history)
+    # print("R: ", right_line_history)
 
 
