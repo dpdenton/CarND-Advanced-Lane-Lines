@@ -97,7 +97,7 @@ def process_img(img, fname='video.jpg', save=False):
     l_channel_img_bin = apply_thresh(l_channel_img, thresh=(200, 255))
     if save:
         plt.imshow(l_channel_img_bin, cmap="gray")
-        plt.title("L channel with thresh {}".format((150, 255)))
+        plt.title("L channel with thresh {}".format((200, 255)))
         plt.savefig(join(save_dir, "l_channel_img_bin.jpg"))
 
     s_channel_img = bgr2x(undistorted_img, x="s")
@@ -109,7 +109,7 @@ def process_img(img, fname='video.jpg', save=False):
     s_channel_img_bin = apply_thresh(s_channel_img, thresh=(150, 255))
     if save:
         plt.imshow(s_channel_img_bin, cmap="gray")
-        plt.title("S channel of {}".format(fname))
+        plt.title("S channel with thresh {}".format((150, 255)))
         plt.savefig(join(save_dir, "s_channel_bin.jpg"))
 
     #####################

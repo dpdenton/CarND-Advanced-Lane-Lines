@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3914a94-282f-4e1f-aa9f-186abc73f1d1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/combined.jpg" afterPath="$PROJECT_DIR$/output_images/test1/combined.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/combined_grad_mag_dir.jpg" afterPath="$PROJECT_DIR$/output_images/test1/combined_grad_mag_dir.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/dir_bin.jpg" afterPath="$PROJECT_DIR$/output_images/test1/dir_bin.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/gradx_bin.jpg" afterPath="$PROJECT_DIR$/output_images/test1/gradx_bin.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/grady_bin.jpg" afterPath="$PROJECT_DIR$/output_images/test1/grady_bin.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/histogram.jpg" afterPath="$PROJECT_DIR$/output_images/test1/histogram.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/l_channel.jpg" afterPath="$PROJECT_DIR$/output_images/test1/l_channel.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/l_channel_img_bin.jpg" afterPath="$PROJECT_DIR$/output_images/test1/l_channel_img_bin.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/mag_bin.jpg" afterPath="$PROJECT_DIR$/output_images/test1/mag_bin.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/original.jpg" afterPath="$PROJECT_DIR$/output_images/test1/original.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/result.jpg" afterPath="$PROJECT_DIR$/output_images/test1/result.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/s_channel.jpg" afterPath="$PROJECT_DIR$/output_images/test1/s_channel.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/s_channel_bin.jpg" afterPath="$PROJECT_DIR$/output_images/test1/s_channel_bin.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/transform.jpg" afterPath="$PROJECT_DIR$/output_images/test1/transform.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/undistort.jpg" afterPath="$PROJECT_DIR$/output_images/test1/undistort.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pipeline.py" afterPath="$PROJECT_DIR$/pipeline.py" />
     </list>
@@ -37,8 +24,8 @@
       <file leaf-file-name="pipeline.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pipeline.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="176" column="0" lean-forward="true" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+            <state relative-caret-position="329">
+              <caret line="111" column="56" lean-forward="false" selection-start-line="111" selection-start-column="56" selection-end-line="111" selection-end-column="56" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -46,7 +33,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plot.jpg" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test1.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_images/test1.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="l_channel_img_bin.jpg" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/output_images/test1/l_channel_img_bin.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="s_channel_bin.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/output_images/test1/s_channel_bin.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plot.jpg" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/output_images/test1/plot.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
@@ -76,27 +84,6 @@
       </file>
       <file leaf-file-name="gradx_bin.jpg" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/output_images/test1/gradx_bin.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="l_channel_img_bin.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/output_images/test1/l_channel_img_bin.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="s_channel.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/output_images/test1/s_channel.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="transform.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/output_images/test1/transform.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -196,6 +183,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CarND-Advanced-Lane-Lines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarND-Advanced-Lane-Lines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarND-Advanced-Lane-Lines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test_images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -509,11 +510,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/output_images/video/transform.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/output_images/video/plot.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -603,11 +599,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/output_images/undistortion_exmpale_chessboard.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/test1/s_channel_bin.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -734,11 +725,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/test1/l_channel_img_bin.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/output_images/test1/s_channel.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -764,16 +750,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pipeline.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="176" column="0" lean-forward="true" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/output_images/test1/combined.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -785,6 +761,31 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/output_images/test1/plot.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pipeline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="111" column="56" lean-forward="false" selection-start-line="111" selection-start-column="56" selection-end-line="111" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_images/test1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/test1/s_channel_bin.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/test1/l_channel_img_bin.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
