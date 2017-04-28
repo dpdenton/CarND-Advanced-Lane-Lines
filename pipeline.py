@@ -390,7 +390,8 @@ def process_img(img, fname='video.jpg', save=False):
     print(left_fit[0])
     print(right_fit[0])
     print("Diff {}".format(((left_fit[0] - right_fit[0])**2)**0.5))
-    if ((left_fit[0] - right_fit[0])**2)**0.5 > 2 * abs(left_fit[0]):
+    error = ((left_fit[0] - right_fit[0])**2)**0.5
+    if error > 10 * abs(left_fit[0]) or error > 10 * abs(right_fit[0]):
     # if 1 - abs(left_fit[0] / right_fit[0]) > tolerance or 1 - abs(left_fit[1] / right_fit[1]) > tolerance:
         print("Lines are not parallel...")
         left_line_history.fail_count += 1
