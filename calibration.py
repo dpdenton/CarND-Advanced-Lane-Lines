@@ -151,4 +151,4 @@ class CameraCalibration(object):
         plt.figtext(y=0.1, x=0.1, s="Undistortion of {}".format(test_fname))
 
         if save:
-            plt.savefig("./output_images/undistortion_exmpale.jpg")
+            plt.savefig("./output_images/undistortion_exmpale_chessboard.jpg")

@@ -508,7 +508,7 @@ if __name__ == "__main__":
     ########################
 
     # test undistortion
-    test_fname = join(TEST_IMAGES_DIR, 'test1.jpg')
+    test_fname = join(CAMERA_CALIBRATION_DIR, 'calibration2.jpg')
     camera_cal.test(test_fname, save=True)
 
     # test transform perspective - straight lines
@@ -534,14 +534,14 @@ if __name__ == "__main__":
     #         img = camera_cal.undistort(img)
     #         process_img(img, fname, save=True)
 
-    from moviepy.editor import VideoFileClip
-
-    white_output = 'project_video_out.mp4'
-    clip1 = VideoFileClip("project_video.mp4")
-    white_clip = clip1.fl_image(process_img)
-    white_clip.write_videofile(white_output, audio=False)
-
-    print("L: ", left_line_history)
-    print("R: ", right_line_history)
+    # from moviepy.editor import VideoFileClip
+    #
+    # white_output = 'project_video_out.mp4'
+    # clip1 = VideoFileClip("project_video.mp4")
+    # white_clip = clip1.fl_image(process_img)
+    # white_clip.write_videofile(white_output, audio=False)
+    #
+    # print("L: ", left_line_history)
+    # print("R: ", right_line_history)
 
 
