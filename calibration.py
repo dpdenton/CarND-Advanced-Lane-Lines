@@ -90,7 +90,7 @@ class CameraCalibration(object):
 
         return self.mtx
 
-    def setM(self):
+    def setM(self, src=None, dst=None):
         """
         # Set matrix using points on image "test_images/straight_lines1.jpg"
         :return: self
@@ -100,21 +100,24 @@ class CameraCalibration(object):
         if self.M is not None:
             return self
 
-        # For source points I'm grabbing the outer four detected corners
-        # hard-coded src points from straight_lines1.jpg
-        src = np.float32([
-            [580, 460],  # top left
-            [700, 460],  # top right
-            [1122, 720],  # bottom right
-            [185, 720],  # bottom left
-        ])
-        # For destination points, I'm choosing points that extend the height of the image, excluding the bonnet region.
-        dst = np.float32([
-            [256, 0],  # top left
-            [1050, 0],  # top right
-            (1050, 720),  # bottom right
-            (256, 720),  # bottom left
-        ])
+        if src is None:
+            # For source points I'm grabbing the outer four detected corners
+            # hard-coded src points from straight_lines1.jpg
+            src = np.float32([
+                [580, 460],  # top left
+                [700, 460],  # top right
+                [1122, 720],  # bottom right
+                [185, 720],  # bottom left
+            ])
+
+        if dst is None:
+            # For destination points, I'm choosing points that extend the height of the image, excluding the bonnet region.
+            dst = np.float32([
+                [256, 0],  # top left
+                [1050, 0],  # top right
+                (1050, 720),  # bottom right
+                (256, 720),  # bottom left
+            ])
 
         # Given src and dst points, calculate the perspective transform matrix
         self.M = cv2.getPerspectiveTransform(src, dst)

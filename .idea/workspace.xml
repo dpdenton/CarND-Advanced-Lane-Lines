@@ -2,6 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3914a94-282f-4e1f-aa9f-186abc73f1d1" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/writeup_template.md" afterPath="$PROJECT_DIR$/writeup.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/combined.jpg" afterPath="$PROJECT_DIR$/output_images/test1/combined.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/combined_grad_mag_dir.jpg" afterPath="$PROJECT_DIR$/output_images/test1/combined_grad_mag_dir.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/dir_bin.jpg" afterPath="$PROJECT_DIR$/output_images/test1/dir_bin.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/gradx_bin.jpg" afterPath="$PROJECT_DIR$/output_images/test1/gradx_bin.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/grady_bin.jpg" afterPath="$PROJECT_DIR$/output_images/test1/grady_bin.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/l_channel.jpg" afterPath="$PROJECT_DIR$/output_images/test1/l_channel.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/l_channel_img_bin.jpg" afterPath="$PROJECT_DIR$/output_images/test1/l_channel_img_bin.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/mag_bin.jpg" afterPath="$PROJECT_DIR$/output_images/test1/mag_bin.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/original.jpg" afterPath="$PROJECT_DIR$/output_images/test1/original.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/plot.jpg" afterPath="$PROJECT_DIR$/output_images/test1/plot.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/result.jpg" afterPath="$PROJECT_DIR$/output_images/test1/result.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/s_channel.jpg" afterPath="$PROJECT_DIR$/output_images/test1/s_channel.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/s_channel_bin.jpg" afterPath="$PROJECT_DIR$/output_images/test1/s_channel_bin.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/transform.jpg" afterPath="$PROJECT_DIR$/output_images/test1/transform.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output_images/test1/undistort.jpg" afterPath="$PROJECT_DIR$/output_images/test1/undistort.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project_video_out.mp4" afterPath="$PROJECT_DIR$/project_video_out.mp4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calibration.py" afterPath="$PROJECT_DIR$/calibration.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pipeline.py" afterPath="$PROJECT_DIR$/pipeline.py" />
     </list>
@@ -22,8 +41,8 @@
       <file leaf-file-name="pipeline.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pipeline.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="511" column="17" lean-forward="false" selection-start-line="511" selection-start-column="17" selection-end-line="511" selection-end-column="17" />
+            <state relative-caret-position="-184">
+              <caret line="449" column="0" lean-forward="false" selection-start-line="449" selection-start-column="0" selection-end-line="449" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -31,18 +50,81 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="179" selection-end-column="61" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="result.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/output_images/test3/result.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="using_history_plot.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/output_images/straight_lines2/using_history_plot.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="calibration.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/calibration.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="154" column="0" lean-forward="true" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+            <state relative-caret-position="149">
+              <caret line="104" column="12" lean-forward="false" selection-start-line="104" selection-start-column="12" selection-end-line="104" selection-end-column="60" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="undistortion_exmpale_chessboard.jpg" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/output_images/undistortion_exmpale_chessboard.jpg">
+      <file leaf-file-name="plot.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/output_images/test5/plot.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="writeup.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/writeup.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="489">
+                <caret line="178" column="0" lean-forward="true" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plot.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/output_images/straight_lines1/plot.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plot.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/output_images/straight_lines2/plot.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -70,6 +152,7 @@
       <find>L_leftcurve</find>
       <find>left_fitx</find>
       <find>right_line_window1</find>
+      <find>warp</find>
     </findStrings>
     <replaceStrings>
       <replace>cam_cal</replace>
@@ -86,9 +169,11 @@
       <list>
         <option value="$PROJECT_DIR$/pre_processing.py" />
         <option value="$PROJECT_DIR$/utils.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/pipeline.py" />
         <option value="$PROJECT_DIR$/calibration.py" />
+        <option value="$PROJECT_DIR$/pipeline.py" />
+        <option value="$PROJECT_DIR$/writeup_template.md" />
+        <option value="$PROJECT_DIR$/writeup.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -129,20 +214,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CarND-Advanced-Lane-Lines" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CarND-Advanced-Lane-Lines" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CarND-Advanced-Lane-Lines" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="output_images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -424,106 +495,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/test1/plot.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/test2/plot.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/test4/plot.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/test6/plot.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/test_gradient/plot.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/test6/undistort.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/test5/undistort.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/test5/s_channel_bin.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/test5/s_channel.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/test5/combined.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/test5/plot.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/straight_lines2/result.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/straight_lines2/plot.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/straight_lines2/using_history_plot.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/video/undistort.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/video/combined.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/video/combined_grad_mag_dir.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/video/dir_bin.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/output_images/video/gradx_bin.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -584,25 +555,6 @@
         <state relative-caret-position="-952">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/writeup_template.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="340">
-            <caret line="20" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -681,10 +633,110 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/undistortion_exmpale_chessboard.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/test1/dir_bin.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/test1/l_channel_img_bin.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/test1/l_channel.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/test1/s_channel.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/test1/s_channel_bin.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/test2/undistort.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/test2/l_channel.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/test2/l_channel_img_bin.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/test2/dir_bin.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/test2/gradx_bin.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/test2/mag_bin.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/test2/s_channel.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/test2/s_channel_bin.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/straight_lines1/plot.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/straight_lines2/plot.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/straight_lines2/using_history_plot.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output_images/test3/result.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="179" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pipeline.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="511" column="17" lean-forward="false" selection-start-line="511" selection-start-column="17" selection-end-line="511" selection-end-column="17" />
+        <state relative-caret-position="-184">
+          <caret line="449" column="0" lean-forward="false" selection-start-line="449" selection-start-column="0" selection-end-line="449" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -693,15 +745,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/calibration.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="154" column="0" lean-forward="true" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+        <state relative-caret-position="149">
+          <caret line="104" column="12" lean-forward="false" selection-start-line="104" selection-start-column="12" selection-end-line="104" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output_images/undistortion_exmpale_chessboard.jpg">
+    <entry file="file://$PROJECT_DIR$/output_images/test5/plot.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/writeup.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="489">
+            <caret line="178" column="0" lean-forward="true" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

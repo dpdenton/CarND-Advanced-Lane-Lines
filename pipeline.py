@@ -144,10 +144,8 @@ def process_img(img, fname='video.jpg', save=False):
         plt.title("Gradient magniture, thresh={}".format((30, 100)))
         plt.savefig(join(save_dir, "mag_bin.jpg"))
 
-    # combine s OR l thresholds to capture yellow white lines
+    # combine gradx/y or mag/dir binaries
     combined = np.zeros_like(mag_binary)
-    #combined[(l_channel_img_thresh == 1) | (s_channel_img_thresh == 1) & ((dir_binary == 1) | (mag_binary == 1))] = 1
-
     combined[((gradx == 1) & (grady == 1)) | ((mag_binary == 1) & (dir_binary == 1))] = 1
 
     if save:
@@ -163,16 +161,10 @@ def process_img(img, fname='video.jpg', save=False):
         plt.title("Combined L OR S OR Grad, Mag, Dir")
         plt.savefig(join(save_dir, "combined_grad_mag_dir.jpg"))
 
-    ## Thresholding ##
+    #############################
+    ### Perspective Transform ###
+    #############################
 
-    """
-    The S channel struggles to pick up on weaker white lines, however the L channels picks these up quite well.
-    Comibinig a binary S channel and L channel image with an OR operator helps capture lines of both colour well.
-    Using this approach you can set quite a high threshold when generating the binary images to reduce the noise
-    and get a cleaner image to detect lines.
-    """
-
-    # perspective transform
     combined = camera_cal.setM().warp(combined_grad_mag_dir)
     if save:
         plt.imshow(combined, cmap="gray")
@@ -188,7 +180,7 @@ def process_img(img, fname='video.jpg', save=False):
     window_img = np.zeros_like(out_img)
 
     # if we've already detected lane lines with confidence we can look ahead...
-    # the line fails sanity checks 2 times we use the original method...
+    # the line fails sanity checks 2 times we use the original method to rebuild the plots
     if left_line_history.coeffs and right_line_history.coeffs and left_line_history.fail_count < 2:
 
         margin = 50
@@ -260,12 +252,13 @@ def process_img(img, fname='video.jpg', save=False):
         cv2.fillPoly(window_img, np.int_([left_line_pts]), (0, 255, 0))
         cv2.fillPoly(window_img, np.int_([right_line_pts]), (0, 255, 0))
         result = cv2.addWeighted(out_img, 1, window_img, 0.3, 0)
-        plt.imshow(result)
-        plt.plot(left_fitx, ploty, color='yellow')
-        plt.plot(right_fitx, ploty, color='yellow')
-        plt.xlim(0, 1280)
-        plt.ylim(720, 0)
-        plt.savefig(join(save_dir, "using_history_plot.jpg"))
+        if save:
+            plt.imshow(result)
+            plt.plot(left_fitx, ploty, color='yellow')
+            plt.plot(right_fitx, ploty, color='yellow')
+            plt.xlim(0, 1280)
+            plt.ylim(720, 0)
+            plt.savefig(join(save_dir, "using_history_plot.jpg"))
 
     else:
 
@@ -378,18 +371,6 @@ def process_img(img, fname='video.jpg', save=False):
 
     append = True
 
-    # # Checking that they have similar curvature
-    tolerance = 0.5
-    # if 1 - abs(L_radius / R_radius) > tolerance:
-    #     print("Radius is very different.. L: {}, R: {}".format(L_radius, R_radius))
-    #     append = False
-
-
-    # check 'parallelness'
-
-    print(left_fit[0])
-    print(right_fit[0])
-    print("Diff {}".format(((left_fit[0] - right_fit[0])**2)**0.5))
     error = ((left_fit[0] - right_fit[0])**2)**0.5
     if error > 10 * abs(left_fit[0]) or error > 10 * abs(right_fit[0]):
     # if 1 - abs(left_fit[0] / right_fit[0]) > tolerance or 1 - abs(left_fit[1] / right_fit[1]) > tolerance:
@@ -398,7 +379,6 @@ def process_img(img, fname='video.jpg', save=False):
         append = False
 
     # add values to history
-
     if append:
         # coefficients
         left_line_history.coeffs.append(left_fit)
@@ -428,14 +408,6 @@ def process_img(img, fname='video.jpg', save=False):
     left_fitx = A_l * ploty ** 2 + B_l * ploty + C_l
     right_fitx = A_r * ploty ** 2 + B_r * ploty + C_r
 
-    # # number of non-zero values
-    # left_line_history.num_points.append(left_lane_inds)
-    # right_line_history.num_points.append(right_lane_inds)
-
-    ### Draw ###
-
-    plt.cla()
-
     # Create an image to draw the lines on
     warp_zero = np.zeros_like(combined).astype(np.uint8)
     color_warp = np.dstack((warp_zero, warp_zero, warp_zero))
@@ -453,13 +425,34 @@ def process_img(img, fname='video.jpg', save=False):
     # Combine the result with the original image
     result = cv2.addWeighted(img, 1, newwarp, 0.3, 0)
 
+    # get line positions...
+    xm_per_pix = 3.7 / 700  # meters per pixel in x dimension
+    l_position = A_l * img.shape[0] ** 2 + B_l * img.shape[0] + C_l
+    r_position = A_r * img.shape[0] ** 2 + B_r * img.shape[0] + C_r
+    middle_pxl = img.shape[1] / 2
+    lane_width = (r_position - l_position) * xm_per_pix
+    lane_center = (r_position + l_position) / 2
+    car_position = (lane_center - middle_pxl) * xm_per_pix
+    if car_position > 0:
+        car_position_text = "Position: {0:.2f}m left of center".format(abs(car_position))
+    else:
+        car_position_text = "Position: {0:.2f}m right of center".format(abs(car_position))
+
     # add text to image
     result = cv2.putText(
         img=result,
-        text="L Coeffs: {}".format(
-            left_line_history.coeffs[-1],
-        ),
+        text="Lane Width: {0:.2f}m".format(lane_width),
         org=(50, 50),
+        fontFace=cv2.FONT_HERSHEY_SIMPLEX,
+        fontScale=.5,
+        color=255,
+    )
+
+    # add text to image
+    result = cv2.putText(
+        img=result,
+        text=car_position_text,
+        org=(50, 90),
         fontFace=cv2.FONT_HERSHEY_SIMPLEX,
         fontScale=.5,
         color=255,
@@ -467,10 +460,17 @@ def process_img(img, fname='video.jpg', save=False):
 
     result = cv2.putText(
         img=result,
-        text="R Coeffs: {}".format(
-            right_line_history.coeffs[-1],
-        ),
-        org=(50, 100),
+        text="L Radius: {}m".format(round(L_radius)),
+        org=(50, 130),
+        fontFace=cv2.FONT_HERSHEY_SIMPLEX,
+        fontScale=.5,
+        color=255,
+    )
+
+    result = cv2.putText(
+        img=result,
+        text="R Radius: {}m".format(round(R_radius)),
+        org=(50, 170),
         fontFace=cv2.FONT_HERSHEY_SIMPLEX,
         fontScale=.5,
         color=255,
@@ -509,7 +509,7 @@ if __name__ == "__main__":
 
     # test undistortion
     test_fname = join(CAMERA_CALIBRATION_DIR, 'calibration2.jpg')
-    camera_cal.test(test_fname, save=True)
+    camera_cal.test(test_fname, save=False)
 
     # test transform perspective - straight lines
     fname = "test_images/straight_lines1.jpg"
@@ -529,19 +529,19 @@ if __name__ == "__main__":
 
     # for fname in [join(TEST_IMAGES_DIR, f) for f in listdir(TEST_IMAGES_DIR)]:
     #
-    #     if 'straight_lines' in fname:
+    #     if 'test1' in fname:
     #         img = cv2.imread(fname)
     #         img = camera_cal.undistort(img)
-    #         process_img(img, fname, save=True)
+    #         process_img(img, fname, save=False)
 
-    # from moviepy.editor import VideoFileClip
-    #
-    # white_output = 'project_video_out.mp4'
-    # clip1 = VideoFileClip("project_video.mp4")
-    # white_clip = clip1.fl_image(process_img)
-    # white_clip.write_videofile(white_output, audio=False)
-    #
-    # print("L: ", left_line_history)
-    # print("R: ", right_line_history)
+    from moviepy.editor import VideoFileClip
+
+    white_output = 'project_video_out.mp4'
+    clip1 = VideoFileClip("project_video.mp4")
+    white_clip = clip1.fl_image(process_img)
+    white_clip.write_videofile(white_output, audio=False)
+
+    print("L: ", left_line_history)
+    print("R: ", right_line_history)
 
 
